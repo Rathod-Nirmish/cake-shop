@@ -2,6 +2,7 @@ import Hero from "@/components/layout/Hero";
 import { SignatureCollections } from "@/components/common/SignatureCollections";
 import { CustomOrderCTA } from "@/components/common/CustomOrderCTA";
 import { ChefsStory } from "@/components/common/ChefsStory";
+import { GalleryPreview } from "@/components/common/GalleryPreview";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <SignatureCollections />
       <CustomOrderCTA />
       <ChefsStory />
+      <GalleryPreview />
     </main>
   );
 }
