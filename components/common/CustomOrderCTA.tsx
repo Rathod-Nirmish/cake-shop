@@ -1,0 +1,77 @@
+"use client";
+
+import React from "react";
+import { FileEdit, Utensils, PencilRuler, Leaf, Truck } from "lucide-react";
+
+export function CustomOrderCTA() {
+  return (
+    <section className="relative bg-[#Fdfbf9] dark:bg-[#150a0c] py-24">
+      <div className="mx-auto max-w-7xl px-6 lg:px-20 text-center">
+        {/* Top Floating Icon */}
+        <div className="mb-12 flex justify-center">
+          <div className="flex h-20 w-20 items-center justify-center rounded-full bg-white dark:bg-[#1b0d10] shadow-xl text-primary transition-transform hover:scale-105 duration-300">
+            <FileEdit className="h-8 w-8 text-rose-500" strokeWidth={2} />
+          </div>
+        </div>
+
+        {/* Text Details */}
+        <h2 className="font-serif text-5xl font-light mb-6 text-[#1b0d10] dark:text-white">
+          Your Dream, Our Flour
+        </h2>
+        <p className="mx-auto max-w-2xl text-lg text-[#1b0d10]/70 dark:text-[#fcf8f9]/70 leading-relaxed mb-10">
+          Let&apos;s collaborate to create a masterpiece that tells your story.
+          Our bespoke service ensures every detail—from flavor profiles to
+          hand-painted accents—is perfectly baked to your vision.
+        </p>
+
+        {/* CTA Button */}
+        <button className="rounded-full bg-rose-500 px-10 py-4 text-sm font-bold tracking-widest text-white shadow-lg shadow-rose-500/20 hover:bg-rose-600 transition-all hover:-translate-y-1 active:scale-95">
+          START YOUR CREATION
+        </button>
+
+        {/* Illustrative Elements Grid */}
+        <div className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 opacity-70 grayscale hover:grayscale-0 transition-all duration-700">
+          <div className="flex flex-col items-center gap-4 group cursor-pointer hover:text-rose-500 dark:text-white/80 dark:hover:text-rose-400 transition-colors">
+            <Utensils
+              className="h-8 w-8 text-[#1b0d10] group-hover:text-rose-500 dark:text-white/80 dark:group-hover:text-rose-400 transition-colors"
+              strokeWidth={1.5}
+            />
+            <span className="text-xs font-bold tracking-widest uppercase text-[#1b0d10] group-hover:text-rose-500 dark:text-white/80 dark:group-hover:text-rose-400">
+              Tasting
+            </span>
+          </div>
+
+          <div className="flex flex-col items-center gap-4 group cursor-pointer hover:text-rose-500 dark:text-white/80 dark:hover:text-rose-400 transition-colors">
+            <PencilRuler
+              className="h-8 w-8 text-[#1b0d10] group-hover:text-rose-500 dark:text-white/80 dark:group-hover:text-rose-400 transition-colors"
+              strokeWidth={1.5}
+            />
+            <span className="text-xs font-bold tracking-widest uppercase text-[#1b0d10] group-hover:text-rose-500 dark:text-white/80 dark:group-hover:text-rose-400">
+              Sketching
+            </span>
+          </div>
+
+          <div className="flex flex-col items-center gap-4 group cursor-pointer hover:text-rose-500 dark:text-white/80 dark:hover:text-rose-400 transition-colors">
+            <Leaf
+              className="h-8 w-8 text-[#1b0d10] group-hover:text-rose-500 dark:text-white/80 dark:group-hover:text-rose-400 transition-colors"
+              strokeWidth={1.5}
+            />
+            <span className="text-xs font-bold tracking-widest uppercase text-[#1b0d10] group-hover:text-rose-500 dark:text-white/80 dark:group-hover:text-rose-400">
+              Organic
+            </span>
+          </div>
+
+          <div className="flex flex-col items-center gap-4 group cursor-pointer hover:text-rose-500 dark:text-white/80 dark:hover:text-rose-400 transition-colors">
+            <Truck
+              className="h-8 w-8 text-[#1b0d10] group-hover:text-rose-500 dark:text-white/80 dark:group-hover:text-rose-400 transition-colors"
+              strokeWidth={1.5}
+            />
+            <span className="text-xs font-bold tracking-widest uppercase text-[#1b0d10] group-hover:text-rose-500 dark:text-white/80 dark:group-hover:text-rose-400">
+              Hand-Delivered
+            </span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
