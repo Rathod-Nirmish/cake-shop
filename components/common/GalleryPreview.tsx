@@ -31,21 +31,21 @@ const images = [
 
 export function GalleryPreview() {
   return (
-    <section className="py-32 px-6 bg-white dark:bg-background">
+    <section className="py-32 px-6 bg-background">
       <div className="max-w-7xl mx-auto">
         {/* Header Section */}
         <div className="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
           <div>
-            <span className="text-rose-500 uppercase tracking-[0.4em] text-xs font-bold mb-4 block">
+            <span className="text-primary uppercase tracking-[0.4em] text-xs font-bold mb-4 block">
               Chapter III
             </span>
-            <h2 className="text-4xl md:text-5xl font-serif italic font-light text-[#1b0d10] dark:text-white">
+            <h2 className="text-4xl md:text-5xl font-serif italic font-light text-foreground">
               The Gallery of Textures
             </h2>
           </div>
           <Link
             href="#"
-            className="text-sm font-bold uppercase tracking-widest border-b-2 border-rose-500 pb-1 text-[#1b0d10] dark:text-white hover:text-rose-500 dark:hover:text-rose-400 transition-colors"
+            className="text-sm font-bold uppercase tracking-widest border-b-2 border-primary pb-1 text-foreground hover:text-primary transition-colors"
           >
             View All Work
           </Link>

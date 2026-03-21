@@ -40,6 +40,8 @@
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
   --color-surface: var(--surface);
+  --color-section: var(--section);
+  --color-decorative: var(--decorative);
   --radius-sm: calc(var(--radius) * 0.6);
   --radius-md: calc(var(--radius) * 0.8);
   --radius-lg: var(--radius);
@@ -60,6 +62,8 @@
   --primary-foreground: oklch(0.985 0 0);
   --brand: var(--color-amber-500);
   --surface: var(--color-orange-50);
+  --section: #Fdfbf9;
+  --decorative: #E8DAC1;
   --secondary: oklch(0.97 0 0);
   --secondary-foreground: oklch(0.205 0 0);
   --muted: oklch(0.97 0 0);
@@ -97,6 +101,8 @@
   --primary-foreground: oklch(0.985 0 0);
   --brand: var(--color-amber-500);
   --surface: var(--background);
+  --section: #150a0c;
+  --decorative: var(--color-amber-900);
   --secondary: oklch(0.269 0 0);
   --secondary-foreground: oklch(0.985 0 0);
   --muted: oklch(0.269 0 0);
