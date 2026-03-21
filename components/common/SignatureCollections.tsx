@@ -46,7 +46,7 @@ const collections = [
 
 export function SignatureCollections() {
   return (
-    <section className="bg-orange-50/50 dark:bg-background/80 py-20 overflow-hidden">
+    <section className="bg-surface/50 dark:bg-surface/80 py-20 overflow-hidden">
       <div className="mx-auto max-w-7xl px-6 lg:px-20">
         <Carousel
           opts={{
@@ -58,10 +58,10 @@ export function SignatureCollections() {
           {/* Header & Controls */}
           <div className="mb-12 flex items-end justify-between">
             <div className="flex flex-col gap-2">
-              <h2 className="font-serif text-4xl font-light text-[#1b0d10] dark:text-white">
+              <h2 className="font-serif text-4xl font-light text-foreground">
                 Signature Collections
               </h2>
-              <p className="font-medium text-rose-500">
+              <p className="font-medium text-primary">
                 Curated designs for every aesthetic
               </p>
             </div>
@@ -69,11 +69,11 @@ export function SignatureCollections() {
             <div className="flex gap-2">
               <CarouselPrevious
                 variant="outline"
-                className="static translate-y-0 translate-x-0 h-12 w-12 rounded-full border-rose-500/30 bg-transparent text-[#1b0d10] hover:bg-rose-500/10 hover:text-rose-500 dark:text-white transition-colors"
+                className="static translate-y-0 translate-x-0 h-12 w-12 rounded-full border-primary/30 bg-transparent text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
               />
               <CarouselNext
                 variant="outline"
-                className="static translate-y-0 translate-x-0 h-12 w-12 rounded-full border-rose-500/30 bg-transparent text-[#1b0d10] hover:bg-rose-500/10 hover:text-rose-500 dark:text-white transition-colors"
+                className="static translate-y-0 translate-x-0 h-12 w-12 rounded-full border-primary/30 bg-transparent text-foreground hover:bg-primary/10 hover:text-primary transition-colors"
               />
             </div>
           </div>
@@ -90,15 +90,15 @@ export function SignatureCollections() {
                       style={{ backgroundImage: `url("${item.image}")` }}
                     />
                     <div className="absolute inset-0 flex items-center justify-center bg-black/20 opacity-0 transition-opacity duration-300 group-hover:opacity-100">
-                      <button className="rounded-full bg-white/95 px-6 py-2 text-xs font-bold tracking-widest text-[#1b0d10] transition-transform duration-300 hover:scale-105 hover:bg-white">
+                      <button className="rounded-full bg-background/95 px-6 py-2 text-xs font-bold tracking-widest text-foreground transition-transform duration-300 hover:scale-105 hover:bg-background">
                         QUICK VIEW
                       </button>
                     </div>
                   </div>
-                  <h3 className="font-serif text-xl text-[#1b0d10] dark:text-white">
+                  <h3 className="font-serif text-xl text-foreground">
                     {item.title}
                   </h3>
-                  <p className="mt-1 text-sm font-medium text-rose-500">
+                  <p className="mt-1 text-sm font-medium text-primary">
                     {item.price}
                   </p>
                 </div>
