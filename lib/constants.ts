@@ -11,7 +11,7 @@ export const CONTACT = {
 
 export const NAV_LINKS = [
   { label: "Shop", href: "/menu" },
-  { label: "Collections", href: "/menu/signature" },
+  { label: "Collections", href: "/collections" },
   { label: "Custom Order", href: "#" },
   { label: "Our Story", href: "/about" },
 ];
