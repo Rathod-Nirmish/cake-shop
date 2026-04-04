@@ -36,9 +36,9 @@ export function ChefsStory() {
             <div className="h-1 w-20 bg-primary rounded-full" />
 
             <p className="text-xl leading-relaxed text-foreground/90 italic font-serif">
-              "A cake should be as memorable for the palate as it is for the
-              eyes. We don't just bake; we weave emotions into every layer of
-              sponge and every swipe of ganache."
+              &ldquo;A cake should be as memorable for the palate as it is for the
+              eyes. We don&apos;t just bake; we weave emotions into every layer of
+              sponge and every swipe of ganache.&rdquo;
             </p>
 
             <p className="leading-relaxed text-muted-foreground text-lg">

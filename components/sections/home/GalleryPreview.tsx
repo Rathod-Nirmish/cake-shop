@@ -1,6 +1,5 @@
 import React from "react";
 import Link from "next/link";
-import Image from "next/image";
 
 const images = [
   {
@@ -44,7 +43,7 @@ export function GalleryPreview() {
             </h2>
           </div>
           <Link
-            href="#"
+            href="/gallery"
             className="text-sm font-bold uppercase tracking-widest border-b-2 border-primary pb-1 text-foreground hover:text-primary transition-colors"
           >
             View All Work
@@ -58,7 +57,6 @@ export function GalleryPreview() {
               key={idx}
               className={`rounded-2xl overflow-hidden group shadow-md ${image.aspectClass} ${image.offsetClass}`}
             >
-              {/* Using standard img to handle external unknown domains gracefully, matching the original format */}
               <img
                 alt={image.alt}
                 title={image.alt}

@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import { Search, ShoppingBag } from "lucide-react";
+import { NAV_LINKS, SITE_NAME } from "@/lib/constants";
 
 export function Navbar() {
   return (
@@ -46,23 +47,21 @@ export function Navbar() {
               />
             </svg>
             <span className="font-serif text-2xl font-bold tracking-tight text-[#1b0d10] dark:text-white mt-1">
-              Isabella
+              {SITE_NAME}
             </span>
           </Link>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center gap-10">
-            {["Shop", "Collections", "Custom Order", "Our Story"].map(
-              (item) => (
+            {NAV_LINKS.map((link) => (
                 <Link
-                  key={item}
-                  href="#"
+                  key={link.href}
+                  href={link.href}
                   className="text-sm font-medium text-[#1b0d10]/80 dark:text-white/80 hover:text-primary transition-colors"
                 >
-                  {item}
+                  {link.label}
                 </Link>
-              ),
-            )}
+              ))}
           </nav>
 
           {/* Right Action Icons */}
