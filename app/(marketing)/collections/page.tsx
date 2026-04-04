@@ -8,7 +8,7 @@ export const metadata: Metadata = {
 
 export default function CollectionsPage() {
   return (
-    <main className="max-w-[1440px] mx-auto px-6 lg:px-20 py-10">
+    <main className="max-w-[1440px] min-w-full mx-auto px-6 lg:px-20 py-10">
       {/* Header Content */}
       <div className="mb-12">
         <div className="flex items-center gap-2 text-primary mb-2">

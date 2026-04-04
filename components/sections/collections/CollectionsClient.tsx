@@ -1,11 +1,12 @@
 "use client";
 
-import { useState, useMemo } from "react";
+import { useState, useMemo, useEffect } from "react";
 import { SidebarFilters } from "./SidebarFilters";
 import { ProductGallery } from "./ProductGallery";
 import { GALLERY_ITEMS, FLAVORS } from "./data";
 
 export function CollectionsClient() {
+  const [isFiltering, setIsFiltering] = useState(false);
   const [selectedOccasions, setSelectedOccasions] = useState<string[]>([]);
   const [selectedDietary, setSelectedDietary] = useState<string[]>([]);
   // We can select multiple flavors, or a single. Let's just do an array for consistency
@@ -40,6 +41,15 @@ export function CollectionsClient() {
     });
 
     return items;
+  }, [selectedOccasions, selectedDietary, selectedFlavors, sortOrder]);
+
+  // Simulate network delay for that premium filtering UX
+  useEffect(() => {
+    setIsFiltering(true);
+    const timer = setTimeout(() => {
+      setIsFiltering(false);
+    }, 600);
+    return () => clearTimeout(timer);
   }, [selectedOccasions, selectedDietary, selectedFlavors, sortOrder]);
 
   // Calculate dynamic counts based on the other active filters, so users know
@@ -77,6 +87,7 @@ export function CollectionsClient() {
         totalItems={GALLERY_ITEMS.length}
         sortOrder={sortOrder}
         setSortOrder={setSortOrder}
+        isFiltering={isFiltering}
       />
     </div>
   );
