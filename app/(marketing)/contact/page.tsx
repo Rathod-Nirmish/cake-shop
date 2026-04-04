@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { ContactForm } from "@/components/sections/contact/ContactForm";
 import { MapEmbed } from "@/components/sections/contact/MapEmbed";
+import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Contact | Isabella",
@@ -9,6 +10,9 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
+  if (process.env.NODE_ENV !== "development") {
+    notFound();
+  }
   return (
     <main>
       <PageHeader

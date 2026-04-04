@@ -12,20 +12,20 @@ export const CONTACT = {
 export const NAV_LINKS = [
   { label: "Shop", href: "/menu" },
   { label: "Collections", href: "/menu/signature" },
-  { label: "Custom Order", href: "/custom-orders" },
+  { label: "Custom Order", href: "#" },
   { label: "Our Story", href: "/about" },
 ];
 
 export const FOOTER_EXPLORE_LINKS = [
   { label: "Our Shop", href: "/menu" },
   { label: "Wedding Gallery", href: "/gallery" },
-  { label: "Bespoke Process", href: "/custom-orders" },
+  { label: "Bespoke Process", href: "#" },
   { label: "Shipping & Returns", href: "/legal/shipping" },
 ];
 
 export const LEGAL_LINKS = [
-  { label: "Privacy Policy", href: "/privacy" },
-  { label: "Terms of Service", href: "/terms" },
+  // { label: "Privacy Policy", href: "/privacy" },
+  // { label: "Terms of Service", href: "/terms" },
 ];
 
 export const SOCIAL_LINKS = [

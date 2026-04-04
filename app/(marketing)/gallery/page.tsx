@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { PageHeader } from "@/components/layout/PageHeader";
 import { GalleryGrid } from "@/components/sections/gallery/GalleryGrid";
+import { notFound } from "next/navigation";
 
 export const metadata: Metadata = {
   title: "Gallery | Isabella",
@@ -9,6 +10,9 @@ export const metadata: Metadata = {
 };
 
 export default function GalleryPage() {
+  if (process.env.NODE_ENV !== "development") {
+    notFound();
+  }
   return (
     <main>
       <PageHeader

@@ -3,6 +3,8 @@ import { PageHeader } from "@/components/layout/PageHeader";
 import { CustomOrderCTA } from "@/components/sections/home/CustomOrderCTA";
 import { ContactForm } from "@/components/sections/contact/ContactForm";
 
+import { notFound } from "next/navigation";
+
 export const metadata: Metadata = {
   title: "Custom Orders | Isabella",
   description:
@@ -10,6 +12,13 @@ export const metadata: Metadata = {
 };
 
 export default function CustomOrdersPage() {
+  // If we are in production, return a 404.
+  // If you want to block yourself from seeing it locally too, just use `notFound()` outside the if statement.
+  if (process.env.NODE_ENV !== "development") {
+    notFound();
+  }
+  // notFound();
+
   return (
     <main>
       <PageHeader
