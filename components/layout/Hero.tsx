@@ -1,9 +1,149 @@
 import React from "react";
 import { Star } from "lucide-react";
+import { Icon } from "@iconify/react";
+
+const FLOATING_ITEMS = [
+  {
+    icon: "noto:birthday-cake",
+    size: 36,
+    top: "8%",
+    left: "3%",
+    delay: "0s",
+    duration: "7s",
+    rotate: -12,
+  },
+  {
+    icon: "noto:shortcake",
+    size: 32,
+    top: "18%",
+    left: "88%",
+    delay: "1.2s",
+    duration: "9s",
+    rotate: 10,
+  },
+  {
+    icon: "noto:cupcake",
+    size: 34,
+    top: "35%",
+    left: "5%",
+    delay: "2.5s",
+    duration: "8s",
+    rotate: 15,
+  },
+  {
+    icon: "noto:doughnut",
+    size: 38,
+    top: "65%",
+    left: "92%",
+    delay: "0.8s",
+    duration: "10s",
+    rotate: -8,
+  },
+  {
+    icon: "noto:strawberry",
+    size: 28,
+    top: "75%",
+    left: "4%",
+    delay: "3s",
+    duration: "7.5s",
+    rotate: 12,
+  },
+  {
+    icon: "noto:lollipop",
+    size: 30,
+    top: "85%",
+    left: "80%",
+    delay: "1.8s",
+    duration: "9.5s",
+    rotate: -5,
+  },
+  {
+    icon: "noto:cookie",
+    size: 28,
+    top: "50%",
+    left: "96%",
+    delay: "4s",
+    duration: "8.5s",
+    rotate: 8,
+  },
+  {
+    icon: "noto:honey-pot",
+    size: 32,
+    top: "5%",
+    left: "55%",
+    delay: "2s",
+    duration: "11s",
+    rotate: -18,
+  },
+  {
+    icon: "noto:chocolate-bar",
+    size: 30,
+    top: "90%",
+    left: "42%",
+    delay: "0.4s",
+    duration: "8s",
+    rotate: 10,
+  },
+  {
+    icon: "noto:candy",
+    size: 28,
+    top: "28%",
+    left: "76%",
+    delay: "3.5s",
+    duration: "9s",
+    rotate: -6,
+  },
+  {
+    icon: "noto:cherry",
+    size: 26,
+    top: "55%",
+    left: "1%",
+    delay: "2.8s",
+    duration: "8.5s",
+    rotate: 14,
+  },
+  {
+    icon: "noto:ice-cream",
+    size: 32,
+    top: "12%",
+    left: "70%",
+    delay: "1.5s",
+    duration: "7s",
+    rotate: -10,
+  },
+];
 
 export default function Hero() {
   return (
     <section className="relative px-6 py-12 lg:px-20 lg:py-24 overflow-hidden">
+      {/* Floating background icons */}
+      <style>{`
+        @keyframes float-gentle {
+          0%   { transform: translateY(0px)   rotate(var(--r)); opacity: var(--op); }
+          50%  { transform: translateY(-18px) rotate(calc(var(--r) + 6deg)); opacity: calc(var(--op) * 1.4); }
+          100% { transform: translateY(0px)   rotate(var(--r)); opacity: var(--op); }
+        }
+        .cake-float {
+          animation: float-gentle var(--dur) ease-in-out var(--delay) infinite;
+        }
+      `}</style>
+      {/* <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0">
+        {FLOATING_ITEMS.map(({ icon, size, top, left, delay, duration, rotate }, i) => (
+          <div
+            key={i}
+            className="cake-float absolute select-none"
+            style={{
+              top, left,
+              "--r": `${rotate}deg`,
+              "--op": "0.9",
+              "--dur": duration,
+              "--delay": delay,
+            } as React.CSSProperties}
+          >
+            <Icon icon={icon} width={size} height={size} />
+          </div>
+        ))}
+      </div> */}
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           {/* Text Content */}
