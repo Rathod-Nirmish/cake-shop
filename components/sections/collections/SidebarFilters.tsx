@@ -24,7 +24,11 @@ export function SidebarFilters({
   flavorCounts,
   clearAll,
 }: SidebarFiltersProps) {
-  const toggleArrayItem = (array: string[], setArray: (val: string[]) => void, item: string) => {
+  const toggleArrayItem = (
+    array: string[],
+    setArray: (val: string[]) => void,
+    item: string,
+  ) => {
     if (array.includes(item)) {
       setArray(array.filter((i) => i !== item));
     } else {
@@ -33,7 +37,7 @@ export function SidebarFilters({
   };
 
   return (
-    <aside className="w-full lg:w-64 shrink-0 space-y-8">
+    <aside className="w-full lg:w-55 xl:w-64 shrink-0 space-y-8">
       <div>
         <h3 className="text-sm font-bold uppercase tracking-widest mb-4 flex items-center justify-between">
           Occasions
@@ -48,12 +52,22 @@ export function SidebarFilters({
               <input
                 type="checkbox"
                 checked={selectedOccasions.includes(occasion)}
-                onChange={() => toggleArrayItem(selectedOccasions, setSelectedOccasions, occasion)}
+                onChange={() =>
+                  toggleArrayItem(
+                    selectedOccasions,
+                    setSelectedOccasions,
+                    occasion,
+                  )
+                }
                 className="rounded border-border text-primary focus:ring-primary"
               />
-              <span className={`text-sm font-medium transition-colors ${
-                selectedOccasions.includes(occasion) ? "text-primary" : "group-hover:text-primary"
-              }`}>
+              <span
+                className={`text-sm font-medium transition-colors ${
+                  selectedOccasions.includes(occasion)
+                    ? "text-primary"
+                    : "group-hover:text-primary"
+                }`}
+              >
                 {occasion}
               </span>
             </label>
@@ -72,7 +86,9 @@ export function SidebarFilters({
             return (
               <button
                 key={tag}
-                onClick={() => toggleArrayItem(selectedDietary, setSelectedDietary, tag)}
+                onClick={() =>
+                  toggleArrayItem(selectedDietary, setSelectedDietary, tag)
+                }
                 className={`px-3 py-1.5 rounded-full text-xs font-bold transition-colors ${
                   isSelected
                     ? "bg-primary/10 text-primary border border-primary/20"
@@ -94,27 +110,38 @@ export function SidebarFilters({
           {FLAVORS.map((flavor) => {
             const isSelected = selectedFlavors.includes(flavor);
             return (
-              <div 
-                key={flavor} 
+              <div
+                key={flavor}
                 className="flex items-center justify-between cursor-pointer group"
-                onClick={() => toggleArrayItem(selectedFlavors, setSelectedFlavors, flavor)}
+                onClick={() =>
+                  toggleArrayItem(selectedFlavors, setSelectedFlavors, flavor)
+                }
               >
                 <div className="flex items-center gap-2">
-                   <div className={`w-4 h-4 rounded border flex items-center justify-center ${isSelected ? 'bg-primary border-primary' : 'border-border group-hover:border-primary'}`}>
-                      {isSelected && <Check className="w-3 h-3 text-white" />}
-                   </div>
-                   <span className={`text-sm ${isSelected ? 'text-primary font-bold' : ''}`}>{flavor}</span>
+                  <div
+                    className={`w-4 h-4 rounded border flex items-center justify-center ${isSelected ? "bg-primary border-primary" : "border-border group-hover:border-primary"}`}
+                  >
+                    {isSelected && <Check className="w-3 h-3 text-white" />}
+                  </div>
+                  <span
+                    className={`text-sm ${isSelected ? "text-primary font-bold" : ""}`}
+                  >
+                    {flavor}
+                  </span>
                 </div>
-                <span className="text-xs text-muted-foreground">{flavorCounts[flavor] || 0}</span>
+                <span className="text-xs text-muted-foreground">
+                  {flavorCounts[flavor] || 0}
+                </span>
               </div>
             );
           })}
         </div>
       </div>
 
-      <button 
-         onClick={clearAll}
-         className="w-full flex items-center justify-center gap-2 py-3 border border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all">
+      <button
+        onClick={clearAll}
+        className="w-full flex items-center justify-center gap-2 py-3 border border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all"
+      >
         <RefreshCw className="w-4 h-4" />
         Clear All Filters
       </button>

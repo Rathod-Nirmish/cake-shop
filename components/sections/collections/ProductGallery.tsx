@@ -97,29 +97,41 @@ export function ProductGallery({ items, totalItems, sortOrder, setSortOrder, isF
             {displayItems.map((item) => (
               <div
                 key={item.id}
-                className="relative group cursor-pointer overflow-hidden rounded-xl border border-transparent hover:border-[#D4AF37]/30 transition-all flex flex-col"
+                className="group cursor-pointer rounded-2xl border border-border hover:border-[#D4AF37]/40 bg-card hover:shadow-xl transition-all duration-300 flex flex-col overflow-hidden"
               >
-                <Image
-                  src={item.image}
-                  alt={item.title}
-                  width={600}
-                  height={800}
-                  className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-110"
-                />
-                <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 absolute inset-0 bg-linear-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6">
-                  <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
-                    <span
-                      className={`${item.tagBg} text-[10px] font-bold px-2 py-1 rounded uppercase mb-2 inline-block`}
-                    >
-                      {item.tag}
-                    </span>
-                    <h3 className="text-white text-xl font-bold mb-1">{item.title}</h3>
-                    <p className="text-white/80 text-xs mb-4 italic">
+                {/* Image */}
+                <div className="relative overflow-hidden">
+                  <Image
+                    src={item.image}
+                    alt={item.title}
+                    width={600}
+                    height={800}
+                    className="w-full h-64 object-cover transition-transform duration-700 group-hover:scale-105"
+                  />
+                  <span
+                    className={`${item.tagBg} absolute top-3 left-3 text-[10px] font-bold px-2.5 py-1 rounded-full uppercase tracking-wider shadow`}
+                  >
+                    {item.tag}
+                  </span>
+                </div>
+
+                {/* Content */}
+                <div className="flex flex-col flex-1 p-5 gap-3">
+                  <div>
+                    <h3 className="text-base font-bold leading-snug mb-1">{item.title}</h3>
+                    <p className="text-muted-foreground text-xs leading-relaxed italic line-clamp-2">
                       {item.description}
                     </p>
-                    <div className="flex justify-between items-center">
-                      <span className="text-[#D4AF37] font-bold">Starts from {item.price}</span>
-                      <ChevronRight className="text-white w-4 h-4" />
+                  </div>
+
+                  <div className="mt-auto pt-3 border-t border-border flex items-center justify-between">
+                    <div>
+                      <p className="text-[10px] uppercase tracking-widest text-muted-foreground mb-0.5">Starting from</p>
+                      <span className="text-[#D4AF37] font-bold text-sm">{item.price}</span>
+                    </div>
+                    <div className="flex items-center gap-1 text-xs font-semibold text-foreground/60 group-hover:text-[#D4AF37] transition-colors duration-300">
+                      Order Now
+                      <ChevronRight className="w-3.5 h-3.5 transition-transform duration-300 group-hover:translate-x-0.5" />
                     </div>
                   </div>
                 </div>
