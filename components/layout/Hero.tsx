@@ -2,114 +2,118 @@ import React from "react";
 import { Star } from "lucide-react";
 import { Icon } from "@iconify/react";
 
+// driftX: how far to drift horizontally (px), driftY: vertical drift (px)
+// spinDur: full 360° spin duration, driftDur: diagonal drift cycle duration
 const FLOATING_ITEMS = [
   {
-    icon: "noto:birthday-cake",
-    size: 36,
-    top: "8%",
-    left: "3%",
+    icon: "fluent-emoji:birthday-cake",
+    size: 40,
+    top: "6%",
+    left: "2%",
     delay: "0s",
-    duration: "7s",
-    rotate: -12,
+    driftDur: "18s",
+    spinDur: "20s",
+    driftX: 14,
+    driftY: -22,
   },
   {
-    icon: "noto:shortcake",
-    size: 32,
-    top: "18%",
-    left: "88%",
-    delay: "1.2s",
-    duration: "9s",
-    rotate: 10,
-  },
-  {
-    icon: "noto:cupcake",
-    size: 34,
-    top: "35%",
-    left: "5%",
+    icon: "fluent-emoji:cupcake",
+    size: 36,
+    top: "20%",
+    left: "90%",
     delay: "2.5s",
-    duration: "8s",
-    rotate: 15,
+    driftDur: "22s",
+    spinDur: "17s",
+    driftX: -10,
+    driftY: -18,
   },
   {
-    icon: "noto:doughnut",
+    icon: "fluent-emoji:shortcake",
     size: 38,
-    top: "65%",
-    left: "92%",
-    delay: "0.8s",
-    duration: "10s",
-    rotate: -8,
-  },
-  {
-    icon: "noto:strawberry",
-    size: 28,
-    top: "75%",
+    top: "42%",
     left: "4%",
-    delay: "3s",
-    duration: "7.5s",
-    rotate: 12,
+    delay: "1s",
+    driftDur: "20s",
+    spinDur: "24s",
+    driftX: 12,
+    driftY: -20,
   },
   {
-    icon: "noto:lollipop",
-    size: 30,
-    top: "85%",
-    left: "80%",
-    delay: "1.8s",
-    duration: "9.5s",
-    rotate: -5,
+    icon: "fluent-emoji:doughnut",
+    size: 42,
+    top: "68%",
+    left: "88%",
+    delay: "3.2s",
+    driftDur: "16s",
+    spinDur: "19s",
+    driftX: -14,
+    driftY: -16,
   },
   {
-    icon: "noto:cookie",
-    size: 28,
-    top: "50%",
-    left: "96%",
+    icon: "fluent-emoji:lollipop",
+    size: 34,
+    top: "78%",
+    left: "6%",
+    delay: "0.8s",
+    driftDur: "24s",
+    spinDur: "22s",
+    driftX: 10,
+    driftY: -24,
+  },
+  {
+    icon: "fluent-emoji:cookie",
+    size: 32,
+    top: "88%",
+    left: "75%",
     delay: "4s",
-    duration: "8.5s",
-    rotate: 8,
+    driftDur: "19s",
+    spinDur: "16s",
+    driftX: -8,
+    driftY: -20,
   },
   {
-    icon: "noto:honey-pot",
-    size: 32,
-    top: "5%",
-    left: "55%",
-    delay: "2s",
-    duration: "11s",
-    rotate: -18,
-  },
-  {
-    icon: "noto:chocolate-bar",
+    icon: "fluent-emoji:strawberry",
     size: 30,
-    top: "90%",
-    left: "42%",
-    delay: "0.4s",
-    duration: "8s",
-    rotate: 10,
+    top: "10%",
+    left: "62%",
+    delay: "1.8s",
+    driftDur: "21s",
+    spinDur: "26s",
+    driftX: 16,
+    driftY: -14,
   },
   {
-    icon: "noto:candy",
-    size: 28,
-    top: "28%",
-    left: "76%",
-    delay: "3.5s",
-    duration: "9s",
-    rotate: -6,
-  },
-  {
-    icon: "noto:cherry",
-    size: 26,
-    top: "55%",
-    left: "1%",
-    delay: "2.8s",
-    duration: "8.5s",
-    rotate: 14,
-  },
-  {
-    icon: "noto:ice-cream",
+    icon: "fluent-emoji:candy",
     size: 32,
-    top: "12%",
-    left: "70%",
-    delay: "1.5s",
-    duration: "7s",
-    rotate: -10,
+    top: "55%",
+    left: "94%",
+    delay: "3s",
+    driftDur: "17s",
+    spinDur: "21s",
+    driftX: -12,
+    driftY: -18,
+  },
+  {
+    icon: "fluent-emoji:chocolate-bar",
+    size: 34,
+    top: "32%",
+    left: "78%",
+    delay: "5s",
+    driftDur: "23s",
+    spinDur: "18s",
+    driftX: -10,
+    driftY: -22,
+  },
+  {
+    icon: "fluent-emoji:cherry",
+    size: 30,
+    top: "92%",
+    left: "32%",
+    delay: "2s",
+    driftDur: "20s",
+    spinDur: "23s",
+    driftX: 8,
+    driftY: -16,
   },
 ];
 
@@ -118,32 +122,63 @@ export default function Hero() {
     <section className="relative px-6 py-12 lg:px-20 lg:py-24 overflow-hidden">
       {/* Floating background icons */}
       <style>{`
-        @keyframes float-gentle {
-          0%   { transform: translateY(0px)   rotate(var(--r)); opacity: var(--op); }
-          50%  { transform: translateY(-18px) rotate(calc(var(--r) + 6deg)); opacity: calc(var(--op) * 1.4); }
-          100% { transform: translateY(0px)   rotate(var(--r)); opacity: var(--op); }
+        @keyframes drift {
+          0%   { transform: translate(0px, 0px)                    scale(1);    opacity: 0.82; }
+          25%  { transform: translate(calc(var(--dx) * 0.6px), calc(var(--dy) * 0.5px)) scale(1.06); opacity: 0.95; }
+          50%  { transform: translate(calc(var(--dx) * 1px),   calc(var(--dy) * 1px))   scale(1);    opacity: 0.82; }
+          75%  { transform: translate(calc(var(--dx) * 0.4px), calc(var(--dy) * 0.6px)) scale(0.96); opacity: 0.90; }
+          100% { transform: translate(0px, 0px)                    scale(1);    opacity: 0.82; }
         }
-        .cake-float {
-          animation: float-gentle var(--dur) ease-in-out var(--delay) infinite;
+        @keyframes spin-slow {
+          from { rotate: 0deg; }
+          to   { rotate: 360deg; }
+        }
+        .icon-drift {
+          animation: drift var(--drift-dur) ease-in-out var(--delay) infinite;
+        }
+        .icon-spin {
+          animation: spin-slow var(--spin-dur) linear var(--delay) infinite;
+          display: inline-flex;
         }
       `}</style>
-      {/* <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0">
-        {FLOATING_ITEMS.map(({ icon, size, top, left, delay, duration, rotate }, i) => (
-          <div
-            key={i}
-            className="cake-float absolute select-none"
-            style={{
-              top, left,
-              "--r": `${rotate}deg`,
-              "--op": "0.9",
-              "--dur": duration,
-              "--delay": delay,
-            } as React.CSSProperties}
-          >
-            <Icon icon={icon} width={size} height={size} />
-          </div>
-        ))}
-      </div> */}
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0"
+      >
+        {FLOATING_ITEMS.map(
+          (
+            { icon, size, top, left, delay, driftDur, spinDur, driftX, driftY },
+            i,
+          ) => (
+            <div
+              key={i}
+              className="icon-drift absolute select-none drop-shadow-sm"
+              style={
+                {
+                  top,
+                  left,
+                  "--dx": driftX,
+                  "--dy": driftY,
+                  "--drift-dur": driftDur,
+                  "--delay": delay,
+                } as React.CSSProperties
+              }
+            >
+              <span
+                className="icon-spin"
+                style={
+                  {
+                    "--spin-dur": spinDur,
+                    "--delay": delay,
+                  } as React.CSSProperties
+                }
+              >
+                <Icon icon={icon} width={size} height={size} />
+              </span>
+            </div>
+          ),
+        )}
+      </div>
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           {/* Text Content */}
