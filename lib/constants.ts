@@ -10,10 +10,11 @@ export const CONTACT = {
 };
 
 export const NAV_LINKS = [
-  { label: "Shop", href: "/menu" },
-  { label: "Collections", href: "/collections" },
-  { label: "Custom Order", href: "#" },
-  { label: "Our Story", href: "/about" },
+  // { label: "Shop", href: "/menu" },
+  { label: "Home", href: "/" },
+  { label: "Creations", href: "/creations" },
+  // { label: "Custom Order", href: "#" },
+  // { label: "Our Story", href: "/about" },
 ];
 
 export const FOOTER_EXPLORE_LINKS = [

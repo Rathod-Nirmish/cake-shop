@@ -1,6 +1,7 @@
 import React from "react";
 import { Star } from "lucide-react";
 import { Icon } from "@iconify/react";
+import Link from "next/link";
 
 // driftX: how far to drift horizontally (px), driftY: vertical drift (px)
 // spinDur: full 360° spin duration, driftDur: diagonal drift cycle duration
@@ -121,7 +122,7 @@ export default function Hero() {
   return (
     <section className="relative px-6 py-12 lg:px-20 lg:py-24 overflow-hidden">
       {/* Floating background icons */}
-      <style>{`
+      {/* <style>{`
         @keyframes drift {
           0%   { transform: translate(0px, 0px)                    scale(1);    opacity: 0.82; }
           25%  { transform: translate(calc(var(--dx) * 0.6px), calc(var(--dy) * 0.5px)) scale(1.06); opacity: 0.95; }
@@ -140,12 +141,12 @@ export default function Hero() {
           animation: spin-slow var(--spin-dur) linear var(--delay) infinite;
           display: inline-flex;
         }
-      `}</style>
+      `}</style> */}
       <div
         aria-hidden="true"
         className="pointer-events-none absolute inset-0 z-0"
       >
-        {FLOATING_ITEMS.map(
+        {/* {FLOATING_ITEMS.map(
           (
             { icon, size, top, left, delay, driftDur, spinDur, driftX, driftY },
             i,
@@ -177,7 +178,7 @@ export default function Hero() {
               </span>
             </div>
           ),
-        )}
+        )} */}
       </div>
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
@@ -200,12 +201,14 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-wrap gap-4 mt-2">
-              <button className="rounded-full bg-primary px-8 py-4 text-sm font-bold tracking-widest text-primary-foreground shadow-lg shadow-primary/20 hover:scale-105 transition-transform">
-                VIEW GALLERY
-              </button>
-              <button className="rounded-full border border-primary/30 px-8 py-4 text-sm font-bold tracking-widest hover:bg-primary/5 dark:hover:bg-primary/10 text-foreground transition-colors">
+              <Link href="/creations" className="w-full">
+                <button className="w-full rounded-full bg-primary px-8 py-4 text-sm font-bold tracking-widest text-primary-foreground shadow-lg shadow-primary/20 hover:scale-102 transition-transform">
+                  VIEW GALLERY
+                </button>
+              </Link>
+              {/* <button className="rounded-full border border-primary/30 px-8 py-4 text-sm font-bold tracking-widest hover:bg-primary/5 dark:hover:bg-primary/10 text-foreground transition-colors">
                 BOOK CONSULTATION
-              </button>
+              </button> */}
             </div>
           </div>
 
