@@ -1,0 +1,29 @@
+[
+  {
+    "id": "1",
+    "author": "Sophie Laurent",
+    "role": "Bride, June 2024",
+    "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuB76jV3_xiIjLOYByRmPbM8qUEAotQKxfRGyjKLHjSwziJE-WnKQk-3AsStcgcP7MrHuVN3n5_AuxfQywUmV2UHnOX37JKLv2-l7WNLKsdOfAgth7a_6Or5QbnCIrLPNXD9JDSksHgblWjNK2XbqfVg3o2Wdav3D4znlzbb1t6jzDAF7sXdN1AT8P54sBM8ctNWKn2IzGFRe8KkLpwtanBHswqsygyS3eVs-TDc10O1V8XV7GVXyFEFLJjBsamrvAFoS9l1mATzgAgw",
+    "rating": 5,
+    "quote": "Isabella crafted our 5-tier wedding cake and it was an absolute dream. Every guest couldn't stop talking about it — both the look and the taste.",
+    "date": "2024-06-15"
+  },
+  {
+    "id": "2",
+    "author": "Marcus Chen",
+    "role": "Birthday Client",
+    "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuByup1t0B3Iwoi9DVquAw4I1DtyRa1jE3L9zBZ5b_tERGw_sqF8x7EXxpGy9QnBmunA42g8MtsNuHUw8WqkBy04fwxnZYHuCQGp_X1EtE6H-ZKo6mIj5F_p2W9pkG4h32W4H-MRcmVK3GwcGHTz3bKr9MHoZcLqPZAgcxfgd8TaTgPVr7RFvbwW3cFcqveyUVohsJShsNJFClD1UxeNiJQ7QxBZpg98FYAkhb4Dygc4zyG9WfRR1zGrgrcnK-4h095pbrxTPd4QfHhd",
+    "rating": 5,
+    "quote": "The Whimsical Wonders cake for my daughter's birthday was beyond what we imagined. The attention to detail is extraordinary.",
+    "date": "2024-09-03"
+  },
+  {
+    "id": "3",
+    "author": "Amara Osei",
+    "role": "Corporate Events Manager",
+    "avatar": "https://lh3.googleusercontent.com/aida-public/AB6AXuAKNHFUGaVYhQ2xXn5-mzZug9mh04m_K80PlBJ4xbMQ3fzaaqbz4g8ASlUYVUirRvM5OJf9Ek4eLyU2BSSjJC33kPCneTkQ1pjRSMYFKEhNXym29BqWHUqWV1Hwfb6vPpzhZ0uo1IrWXvaBVvc18HgOuG4XSGgNYtFd5vdmKtFbr0qk-FdWSLhtqozZun5vx3KQAGvE_ouMci8FbHO85jeNrRxzg5N72yx468GLD_eyUmAPhI_bD9duJ8aeYhQHpkvKHdBmIFTxh8Si",
+    "rating": 5,
+    "quote": "We've used Isabella for three consecutive company galas. Guests always ask who made the cake. The answer is always the same: Isabella.",
+    "date": "2024-11-20"
+  }
+]

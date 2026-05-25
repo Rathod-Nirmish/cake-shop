@@ -3,7 +3,7 @@ import { BadgeCheck } from "lucide-react";
 
 export function ChefsStory() {
   return (
-    <section className="py-24 px-6 lg:px-20 bg-white dark:bg-background">
+    <section className="py-24 px-6 lg:px-20 bg-background">
       <div className="mx-auto max-w-7xl">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 items-center">
           {/* Image Section */}
@@ -19,29 +19,29 @@ export function ChefsStory() {
               />
             </div>
             {/* Decorative Offset Box */}
-            <div className="absolute -right-12 -bottom-12 z-0 aspect-square w-64 md:w-80 rounded-3xl bg-[#E8DAC1] dark:bg-amber-900/40 backdrop-blur-sm shadow-sm" />
+            <div className="absolute -right-12 -bottom-12 z-0 aspect-square w-64 md:w-80 rounded-3xl bg-decorative dark:bg-decorative/40 backdrop-blur-sm shadow-sm" />
           </div>
 
           {/* Text Section */}
           <div className="lg:col-span-7 flex flex-col gap-6 relative z-10 mt-12 lg:mt-0">
-            <span className="text-amber-500 font-bold tracking-widest text-sm uppercase">
+            <span className="text-brand font-bold tracking-widest text-sm uppercase">
               The Artisan Behind The Magic
             </span>
 
-            <h2 className="font-serif text-5xl font-light text-[#1b0d10] dark:text-white leading-tight">
+            <h2 className="font-serif text-5xl font-light text-foreground leading-tight">
               Meet Chef Isabella
             </h2>
 
             {/* Custom Divider */}
-            <div className="h-1 w-20 bg-rose-500 rounded-full" />
+            <div className="h-1 w-20 bg-primary rounded-full" />
 
-            <p className="text-xl leading-relaxed text-[#1b0d10]/90 dark:text-[#fcf8f9]/90 italic font-serif">
-              "A cake should be as memorable for the palate as it is for the
-              eyes. We don't just bake; we weave emotions into every layer of
-              sponge and every swipe of ganache."
+            <p className="text-xl leading-relaxed text-foreground/90 italic font-serif">
+              &ldquo;A cake should be as memorable for the palate as it is for the
+              eyes. We don&apos;t just bake; we weave emotions into every layer of
+              sponge and every swipe of ganache.&rdquo;
             </p>
 
-            <p className="leading-relaxed text-[#1b0d10]/70 dark:text-[#fcf8f9]/70 text-lg">
+            <p className="leading-relaxed text-muted-foreground text-lg">
               With over 15 years of experience in Parisian patisseries and a
               passion for organic, local sourcing, Isabella founded her studio
               to bring a more personal, artistic touch to the world of bespoke
@@ -50,17 +50,17 @@ export function ChefsStory() {
             </p>
 
             {/* Verification Badge Details */}
-            <div className="flex items-center gap-5 mt-6 border border-amber-500/20 p-4 rounded-2xl bg-amber-50/30 dark:bg-amber-950/20 fit-content md:max-w-max">
-              <div className="h-14 w-14 shrink-0 rounded-full border border-amber-500 p-1">
-                <div className="h-full w-full rounded-full bg-amber-500/10 flex items-center justify-center">
-                  <BadgeCheck className="h-7 w-7 text-amber-500" />
+            <div className="flex items-center gap-5 mt-6 border border-brand/20 p-4 rounded-2xl bg-brand/10 dark:bg-brand/20 fit-content md:max-w-max">
+              <div className="h-14 w-14 shrink-0 rounded-full border border-brand p-1">
+                <div className="h-full w-full rounded-full bg-brand/10 flex items-center justify-center">
+                  <BadgeCheck className="h-7 w-7 text-brand" />
                 </div>
               </div>
               <div className="flex flex-col">
-                <p className="font-bold text-[#1b0d10] dark:text-white text-lg">
+                <p className="font-bold text-foreground text-lg">
                   Certified Organic Bakery
                 </p>
-                <p className="text-sm text-rose-500 font-medium">
+                <p className="text-sm text-primary font-medium">
                   Quality you can taste, ethics you can trust.
                 </p>
               </div>

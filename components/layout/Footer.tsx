@@ -3,6 +3,7 @@
 import React from "react";
 import Link from "next/link";
 import { Mail, Phone, MapPin, Send } from "lucide-react";
+import { SITE_NAME, FOOTER_EXPLORE_LINKS, SOCIAL_LINKS, CONTACT } from "@/lib/constants";
 
 export function Footer() {
   return (
@@ -49,7 +50,7 @@ export function Footer() {
                 />
               </svg>
               <h2 className="font-serif text-2xl font-bold tracking-tight text-white mt-1">
-                Isabella
+                {SITE_NAME}
               </h2>
             </Link>
             <p className="text-[#fcf8f9]/60 text-sm leading-relaxed max-w-xs">
@@ -64,38 +65,13 @@ export function Footer() {
               Explore
             </h4>
             <ul className="flex flex-col gap-4 text-sm text-[#fcf8f9]/60">
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-rose-500 transition-colors"
-                >
-                  Our Shop
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-rose-500 transition-colors"
-                >
-                  Wedding Gallery
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-rose-500 transition-colors"
-                >
-                  Bespoke Process
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="hover:text-rose-500 transition-colors"
-                >
-                  Shipping & Returns
-                </Link>
-              </li>
+              {FOOTER_EXPLORE_LINKS.map((link) => (
+                <li key={link.href}>
+                  <Link href={link.href} className="hover:text-rose-500 transition-colors">
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -107,15 +83,15 @@ export function Footer() {
             <ul className="flex flex-col gap-4 text-sm text-[#fcf8f9]/60">
               <li className="flex items-center gap-3 hover:text-rose-500 transition-colors cursor-pointer">
                 <Mail className="h-4 w-4" />
-                <span>hello@isabellacakes.com</span>
+                <span>{CONTACT.email}</span>
               </li>
               <li className="flex items-center gap-3 hover:text-rose-500 transition-colors cursor-pointer">
                 <Phone className="h-4 w-4" />
-                <span>+1 (555) 000-8888</span>
+                <span>{CONTACT.phone}</span>
               </li>
               <li className="flex items-center gap-3 hover:text-rose-500 transition-colors cursor-pointer">
                 <MapPin className="h-4 w-4" />
-                <span>123 Pastry Lane, New York</span>
+                <span>{CONTACT.address}</span>
               </li>
             </ul>
           </div>
@@ -157,15 +133,11 @@ export function Footer() {
             reserved.
           </p>
           <div className="flex gap-6">
-            <Link href="#" className="hover:text-rose-500 transition-colors">
-              Instagram
-            </Link>
-            <Link href="#" className="hover:text-rose-500 transition-colors">
-              Pinterest
-            </Link>
-            <Link href="#" className="hover:text-rose-500 transition-colors">
-              TikTok
-            </Link>
+            {SOCIAL_LINKS.map((link) => (
+              <Link key={link.label} href={link.href} className="hover:text-rose-500 transition-colors">
+                {link.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

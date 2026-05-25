@@ -1,0 +1,123 @@
+export const OCCASIONS = ["Wedding", "Birthday", "Minimalist", "Seasonal"];
+export const DIETARY = ["Gluten-Free", "Vegan", "Nut-Free", "Low Sugar"];
+export const FLAVORS = [
+  "Velvet Vanilla",
+  "Dark Ganache",
+  "Lemon & Elderflower",
+  "Matcha & Honey",
+];
+
+export const GALLERY_ITEMS = [
+  {
+    id: 1,
+    tag: "Wedding",
+    occasions: ["Wedding"],
+    dietary: ["Gluten-Free"],
+    flavor: "Velvet Vanilla",
+    title: "Celestial Bloom",
+    description: "Champagne & Wild Strawberry Filling",
+    price: "$240",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDzEWlwK5oRDiOp8pXvwKjzJBVDvIRgLXTBQdPMaxrMtUZJdfS2gmnfvP2mPXiU_y0REa6C3bp_RIHMbOVyafSPkPAiavnUyRvYFLxJpGuLjcB1NHmGZDcwqX-yFs1PqCkiTyTJ2yU8hiEwXfwKzPta42dcfqlhJtarbl0xTd9LKiN7lE0-J4mnL8hFhqmrZxxGcixk5nZdq8NchG9GtN7rkGB6CGID27hH_NOhbdb9C9BHHm9HpCRqouki_zx4oHP89wvGvtQXm4rq",
+    tagBg: "bg-primary text-white",
+    dateAdded: "2024-01-10",
+  },
+  {
+    id: 2,
+    tag: "Milestone",
+    occasions: ["Birthday"],
+    dietary: ["Nut-Free"],
+    flavor: "Dark Ganache",
+    title: "Midnight Truffle",
+    description: "70% Dark Chocolate & Sea Salt Caramel",
+    price: "$95",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuB7FEoLMov7Zq7RdqlxsT6O-cpKFXUu9HWkOIi9kWJ5gb9IS_5FiNkxTBVDEc2wvp7JLH5pPk2G49XTBWvQ0MgedtlNqm9ld3v4oJmlG-vwdyfQOsw9XeZZoeQkdpYO7nscg8KMgjpPSQpuxRF0rBJ08Q_hBWTVmVCcc6kGPp4Mxq8fdkXIwBi92IIkpf6Y3mVYsJvCTF7FSo7mWk2wFnIKsZ-EWbEPOa91GsfZJEw4hYp8hvOpOvJR99Az-YO9RYkq5bLhyY2xiql0",
+    tagBg: "bg-[#D4AF37] text-white",
+    dateAdded: "2024-01-15",
+  },
+  {
+    id: 3,
+    tag: "Minimalist",
+    occasions: ["Minimalist"],
+    dietary: ["Low Sugar"],
+    flavor: "Lemon & Elderflower",
+    title: "Morning Mist",
+    description: "Earl Grey & Lavender Infusion",
+    price: "$65",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCs6fiaV8rPb9DjcF4ojBEJs8WTsxAWVLLGwWWWvP7sJWFRQDJnsNOkbx_K6GbzhmpQukisqJ9vQe_l_hCZ8EiwRH1lsI0pdRkUw3xF064SeYB0zrGZ5YjsZ52erZgu2--FNq_GrO2P5Hl6SocCLt_L-0HoHPq_MuQvWg0IguPTrSp-TSREWjExOW-YNkBhi3epGAMNDVa0gO3EznlXpUnlLP7DkgadbOFUQZys8zVAzg7c9lzi1O_inceTk9mdoXYS_8P0_yFIoAKT",
+    tagBg: "bg-muted text-foreground",
+    dateAdded: "2024-02-01",
+  },
+  {
+    id: 4,
+    tag: "Seasonal",
+    occasions: ["Seasonal"],
+    dietary: ["Gluten-Free"],
+    flavor: "Lemon & Elderflower",
+    title: "Summer Harvest",
+    description: "Lemon Curd & Mascarpone Frosting",
+    price: "$110",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDCcOR0HtOXSaEEFHMVoMQfD0rVHGWFDBimsHMHWuOtu43Ye9kd5R3r0tBwBqnhloxhsqw1qjf9NsQZ9VkHL6L3MYevqJhNZxoyfdQixsqxj4dDNy-KrxOQgQhOMCqpkpl3rGZSjXRsM4m6zd1_7nNt1LgvRAeESIzgEY_Tv5hfz6QWq7Q4YLHd2m17L82xGVLPg4l93oDep3xG6oZ4allXv05BoW6_dao5Y8xYrn8dFekoeB8Coo448l88i9mEWztyxq1_g4aWMJmM",
+    tagBg: "bg-primary text-white",
+    dateAdded: "2024-03-05",
+  },
+  {
+    id: 5,
+    tag: "Vegan",
+    occasions: ["Birthday", "Minimalist"],
+    dietary: ["Vegan", "Nut-Free"],
+    flavor: "Dark Ganache",
+    title: "Garden Decadence",
+    description: "Avocado Cacao & Roasted Hazelnuts",
+    price: "$120",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuClXPIVqZ61_Cyc-qbLnmflg5Pxgkbd3xPl8_fT80kunOkZMCR98in9bc_EbHEVk14j3_GkijE6KRSEP3o62MHyquQDd-H7gSzeR-PiU5JfxkTlnhoVPDkgmPmnRhc8RsY58jHjcyxfI7tK-qPzgsnzBuUbcLZ1XAN9u1AC6c-JNTU-vnOxCQtvTxScATVXjbIytO2b133URiEWKbspc_xY81uP2Zlt_mhGAABe24bpQVYyzwzXOVG0czciJm8S5tGyGXm_5MQ9kpeG",
+    tagBg: "bg-green-600 text-white",
+    dateAdded: "2024-02-14",
+  },
+  {
+    id: 6,
+    tag: "Artistic",
+    occasions: ["Wedding", "Birthday"],
+    dietary: [],
+    flavor: "Velvet Vanilla",
+    title: "Impressionist Palette",
+    description: "Funfetti & Tahitian Vanilla Bean",
+    price: "$155",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuA5TQYKt15B0w2-n5ytnu2xL70i6cqlf5ZCxA1B7gFG0Y0trFRODJhldKgLNitJeTRoSfMdRYKbUK_UliR9jmI3wnrEJHe5dKtXi_EuajBCCNktVG8Gft4ABuTMuEnt7Uvy_fJk9KODaxT1BAExW9nuN6-SLF8ekyUoEeR18e13ypq__ZoMmsyV2ihmZ19SpBZOhJwR6GxZ0lcZpdppE_Ja4kU68R6S13rXblnI5tCimdMSucOg1pCvbUwhi6AVs1KCXb3NiFpuWLn-",
+    tagBg: "bg-primary text-white",
+    dateAdded: "2024-03-20",
+  },
+  {
+    id: 7,
+    tag: "Minimalist",
+    occasions: ["Minimalist"],
+    dietary: ["Vegan"],
+    flavor: "Matcha & Honey",
+    title: "Zen Garden",
+    description: "Matcha Green Tea & Sweet Honey Buttercream",
+    price: "$85",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuCs6fiaV8rPb9DjcF4ojBEJs8WTsxAWVLLGwWWWvP7sJWFRQDJnsNOkbx_K6GbzhmpQukisqJ9vQe_l_hCZ8EiwRH1lsI0pdRkUw3xF064SeYB0zrGZ5YjsZ52erZgu2--FNq_GrO2P5Hl6SocCLt_L-0HoHPq_MuQvWg0IguPTrSp-TSREWjExOW-YNkBhi3epGAMNDVa0gO3EznlXpUnlLP7DkgadbOFUQZys8zVAzg7c9lzi1O_inceTk9mdoXYS_8P0_yFIoAKT",
+    tagBg: "bg-muted text-foreground",
+    dateAdded: "2024-01-22",
+  },
+  {
+    id: 8,
+    tag: "Wedding",
+    occasions: ["Wedding"],
+    dietary: ["Low Sugar"],
+    flavor: "Velvet Vanilla",
+    title: "Pearl Elegance",
+    description: "French Vanilla Bean & Meringue",
+    price: "$320",
+    image:
+      "https://lh3.googleusercontent.com/aida-public/AB6AXuDzEWlwK5oRDiOp8pXvwKjzJBVDvIRgLXTBQdPMaxrMtUZJdfS2gmnfvP2mPXiU_y0REa6C3bp_RIHMbOVyafSPkPAiavnUyRvYFLxJpGuLjcB1NHmGZDcwqX-yFs1PqCkiTyTJ2yU8hiEwXfwKzPta42dcfqlhJtarbl0xTd9LKiN7lE0-J4mnL8hFhqmrZxxGcixk5nZdq8NchG9GtN7rkGB6CGID27hH_NOhbdb9C9BHHm9HpCRqouki_zx4oHP89wvGvtQXm4rq",
+    tagBg: "bg-primary text-white",
+    dateAdded: "2024-04-01",
+  },
+];
