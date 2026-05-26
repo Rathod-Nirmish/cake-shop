@@ -1,6 +1,13 @@
 "use client";
 
-import { ChevronUp, ChevronDown, RefreshCw, Check, SlidersHorizontal, X } from "lucide-react";
+import {
+  ChevronUp,
+  ChevronDown,
+  RefreshCw,
+  Check,
+  SlidersHorizontal,
+  X,
+} from "lucide-react";
 import { useState } from "react";
 import { OCCASIONS, DIETARY, FLAVORS } from "./data";
 
@@ -50,30 +57,33 @@ export function SidebarFilters({
           <ChevronUp className="w-4 h-4 cursor-pointer" />
         </h3>
         <div className="space-y-3">
-          {OCCASIONS.map((occasion) => (
-            <label
-              key={occasion}
-              className="flex items-center gap-3 cursor-pointer group"
-            >
-              <input
-                type="checkbox"
-                checked={selectedOccasions.includes(occasion)}
-                onChange={() =>
-                  toggleArrayItem(selectedOccasions, setSelectedOccasions, occasion)
+          {OCCASIONS.map((occasion) => {
+            const isSelected = selectedOccasions.includes(occasion);
+            return (
+              <div
+                key={occasion}
+                className="flex items-center gap-3 cursor-pointer group"
+                onClick={() =>
+                  toggleArrayItem(
+                    selectedOccasions,
+                    setSelectedOccasions,
+                    occasion,
+                  )
                 }
-                className="rounded border-border text-primary focus:ring-primary"
-              />
-              <span
-                className={`text-sm font-medium transition-colors ${
-                  selectedOccasions.includes(occasion)
-                    ? "text-primary"
-                    : "group-hover:text-primary"
-                }`}
               >
-                {occasion}
-              </span>
-            </label>
-          ))}
+                <div
+                  className={`w-4 h-4 rounded border flex items-center justify-center shrink-0 ${isSelected ? "bg-primary border-primary" : "border-border group-hover:border-primary"}`}
+                >
+                  {isSelected && <Check className="w-3 h-3 text-white" />}
+                </div>
+                <span
+                  className={`text-sm font-medium transition-colors ${isSelected ? "text-primary" : "group-hover:text-primary"}`}
+                >
+                  {occasion}
+                </span>
+              </div>
+            );
+          })}
         </div>
       </div>
 
@@ -125,7 +135,9 @@ export function SidebarFilters({
                   >
                     {isSelected && <Check className="w-3 h-3 text-white" />}
                   </div>
-                  <span className={`text-sm ${isSelected ? "text-primary font-bold" : ""}`}>
+                  <span
+                    className={`text-sm ${isSelected ? "text-primary" : "group-hover:text-primary"}`}
+                  >
                     {flavor}
                   </span>
                 </div>
@@ -140,7 +152,7 @@ export function SidebarFilters({
 
       <button
         onClick={clearAll}
-        className="w-full flex items-center justify-center gap-2 py-3 border border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all"
+        className="cursor-pointer w-full flex items-center justify-center gap-2 py-3 border border-primary text-primary font-bold rounded-xl hover:bg-primary hover:text-white transition-all"
       >
         <RefreshCw className="w-4 h-4" />
         Clear All Filters
@@ -184,7 +196,9 @@ export function SidebarFilters({
         <div className="flex items-center justify-between px-6 py-5 border-b border-border shrink-0">
           <div className="flex items-center gap-2">
             <SlidersHorizontal className="w-4 h-4 text-[#D4AF37]" />
-            <span className="font-bold uppercase tracking-widest text-sm">Filters</span>
+            <span className="font-bold uppercase tracking-widest text-sm">
+              Filters
+            </span>
             {activeCount > 0 && (
               <span className="w-5 h-5 rounded-full bg-[#D4AF37] text-white text-[10px] font-bold flex items-center justify-center">
                 {activeCount}
@@ -200,9 +214,7 @@ export function SidebarFilters({
         </div>
 
         {/* Drawer Body — scrollable */}
-        <div className="flex-1 overflow-y-auto px-6 py-6">
-          {filterContent}
-        </div>
+        <div className="flex-1 overflow-y-auto px-6 py-6">{filterContent}</div>
 
         {/* Drawer Footer */}
         <div className="px-6 py-4 border-t border-border shrink-0">
